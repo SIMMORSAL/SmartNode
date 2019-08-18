@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.ActivityMain"
+    tools:ignore="NestedWeights">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/logo" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/bg_stroke_rounded"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_tab_left_off"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/switches" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:text="@string/switches"
+                            android:textColor="@color/greyDarker" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/outlet" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:text="@string/outlet"
+                            android:textColor="@color/greyDarker" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_tab_right_off"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/lamp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:text="@string/lamp"
+                            android:textColor="@color/greyDarker" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+

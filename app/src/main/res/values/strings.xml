@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Smart Node</string>
+    <string name="lamp">لامپ ها</string>
+    <string name="switches">کلید ها</string>
+    <string name="outlet">پریز ها</string>
+    <string name="testText">تکست تستی</string>
+</resources>
