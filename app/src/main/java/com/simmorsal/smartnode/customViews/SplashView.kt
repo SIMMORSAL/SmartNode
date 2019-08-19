@@ -94,7 +94,7 @@ class SplashView : View {
 
     private fun getLogo() {
         val drawable =
-            ContextCompat.getDrawable(context, com.simmorsal.smartnode.R.drawable.power_icon)
+            ContextCompat.getDrawable(context, com.simmorsal.smartnode.R.drawable.logo)
 
         if (drawable != null) {
             logo = Bitmap.createBitmap(

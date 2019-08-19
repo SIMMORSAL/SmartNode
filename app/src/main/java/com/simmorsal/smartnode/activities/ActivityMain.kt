@@ -3,6 +3,7 @@ package com.simmorsal.smartnode.activities
 import android.os.Bundle
 import android.os.Handler
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.simmorsal.smartnode.R
 import com.simmorsal.smartnode.adapters.AdapterMainItems
 import com.simmorsal.smartnode.bases.BaseActivity
@@ -26,8 +27,56 @@ class ActivityMain : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        animate()
         onClicks()
         setupRv(2, false)
+    }
+
+    var scene = 0
+    var logoShown = 0
+    private fun animate() {
+
+        when (scene) {
+            0 -> {
+                imgLogo.alpha = 0f
+                linContent.alpha = 0f
+
+                scene++
+                animate()
+            }
+
+            1 -> {
+                imgLogo.animate().alpha(1f).setDuration(400).setStartDelay(400).withLayer()
+                viewWhiteBg.animate().alpha(0f).setDuration(300).setStartDelay(1000).withLayer()
+                linContent.animate().alpha(1f).setDuration(400).setStartDelay(1000).withEndAction {
+                    scene++
+                    animate()
+                }
+            }
+
+            2 -> {
+                imgLogo.animate().alpha(0f).setDuration(300).setStartDelay(2000).withEndAction {
+
+                    logoShown++
+                    if (logoShown > 2)
+                        logoShown = 0
+
+                    val logo = when (logoShown) {
+                        1 -> R.drawable.iot_academy
+                        2 -> R.drawable.itu_academia
+                        else -> R.drawable.logo
+                    }
+
+                    Glide.with(this)
+                        .load(logo)
+                        .into(imgLogo)
+
+                    imgLogo.animate().alpha(1f).setDuration(400).setStartDelay(100).withEndAction {
+                        animate()
+                    }
+                }
+            }
+        }
     }
 
     private fun onClicks() {
