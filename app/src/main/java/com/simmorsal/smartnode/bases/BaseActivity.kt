@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.simmorsal.smartnode.utils.setNoLimit
 import org.jetbrains.anko.doFromSdk
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
@@ -16,6 +17,8 @@ abstract class BaseActivity : AppCompatActivity() {
         doFromSdk(21) {
             window.statusBarColor = Color.WHITE
         }
+
+        setNoLimit(this)
     }
 
 //    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {

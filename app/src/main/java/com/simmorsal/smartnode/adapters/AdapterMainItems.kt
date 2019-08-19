@@ -30,6 +30,7 @@ class AdapterMainItems(private val context: Context) :
 
     fun setData(data: List<ModelMainItems>) {
         this.data = data
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {

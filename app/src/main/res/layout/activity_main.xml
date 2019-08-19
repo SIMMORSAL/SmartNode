@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/grey"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".activities.ActivityMain"
     tools:ignore="NestedWeights">
@@ -33,7 +34,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="60dp"
-                android:background="@drawable/bg_stroke_rounded"
+                android:background="@drawable/bg_stroke_rounded_filled"
                 android:orientation="vertical"
                 android:padding="1dp">
 
@@ -42,6 +43,7 @@
                     android:layout_height="80dp">
 
                     <LinearLayout
+                        android:id="@+id/linSwitches"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -67,6 +69,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/linOutlets"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -89,6 +92,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/linLamps"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
